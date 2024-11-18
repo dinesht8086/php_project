@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="new.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <form
+      name="ContactForm"
+      method="post"
+      action="new.php"
+      onsubmit="return validateForm(this)"
+    >
+      <div class="form-input">
+        <label for="FirstName">First Name<span>*</span></label>
+        <input
+          id="FirstName"
+          type="text"
+          name="FirstName"
+          oninput="validateName(this, 'First Name')"
+        />
+        <p class="errormessage">&nbsp;</p>
+      </div>
+
+      <div class="form-input">
+        <label for="LastName">Last Name<span>*</span></label>
+        <input
+          id="LastName"
+          type="text"
+          name="LastName"
+          oninput="validateName(this, 'Last Name')"
+        />
+        <p class="errormessage">&nbsp;</p>
+      </div>
+
+      <div class="form-input">
+        <label for="Email">Email<span>*</span></label>
+        <input
+          id="Email"
+          type="email"
+          name="Email"
+          oninput="validateEmail(this)"
+        />
+        <p class="errormessage">&nbsp;</p>
+      </div>
+
+      <div class="form-input">
+        <label for="Password">Password<span>*</span></label>
+        <input
+          id="Password"
+          type="password"
+          name="password"
+          oninput="validatePassword(this)"
+        />
+        <p class="errormessage">&nbsp;</p>
+      </div>
+
+      <div class="form-input">
+        <label for="ConfirmPassword">Confirm Password<span>*</span></label>
+        <input
+          id="ConfirmPassword"
+          type="password"
+          name="ConfirmPassword"
+          oninput="validateConfirmPassword(this, document.getElementById('Password'))"
+        />
+        <p class="errormessage">&nbsp;</p>
+      </div>
+
+      <div class="form-input">
+        <label for="Phone">Phone<span>*</span></label>
+        <input
+          id="Phone"
+          type="tel"
+          name="Phone"
+          oninput="validatePhone(this)"
+          onkeypress="return validatePhoneOnKeyPress(event)"
+        />
+        <p class="errormessage">&nbsp;</p>
+      </div>
+
+      <div class="form-input">
+        <label for="Country">Country<span>*</span></label>
+        <select id="Country" name="Country" onchange="validateSelect(this)">
+          <option value="">Select your country</option>
+          <option value="USA">USA</option>
+          <option value="Canada">Canada</option>
+          <option value="India">India</option>
+        </select>
+        <p class="errormessage">&nbsp;</p>
+      </div>
+
+      <div class="form-input">
+        <label>Interests<span>*</span></label>
+        <div>
+          <label
+            ><input
+              type="checkbox"
+              name="Interests"
+              value="Reading"
+              onchange="validateCheckboxGroup()"
+            />
+            Reading</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Interests"
+              value="Traveling"
+              onchange="validateCheckboxGroup()"
+            />
+            Traveling</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Interests"
+              value="Sports"
+              onchange="validateCheckboxGroup()"
+            />
+            Sports</label
+          >
+        </div>
+        <p class="errormessage">&nbsp;</p>
+      </div>
+
+      <div class="form-input">
+        <label for="Comments">Comments<span>*</span></label>
+        <textarea
+          id="Comments"
+          name="Comments"
+          rows="4"
+          oninput="validateTextArea(this, 'Comments')"
+          placeholder="Enter your comments (max 300 characters)"
+        ></textarea>
+        <p class="errormessage">&nbsp;</p>
+      </div>
+
+      <button type="submit">Sign Up</button>
+
+      <div class="login-link">
+        <p>Already have an account? <a href="login.html">Log in</a></p>
+      </div>
+    </form>
+
+    <script src="new.js"></script>
+  </body>
+</html>

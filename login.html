@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="new.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  </head>
+  <body>
+    <form
+      name="LoginForm"
+      method="post"
+      action="login.php"
+      
+    >
+      <h2>Login</h2>
+      <div class="form-input">
+        <label for="Email">Email<span>*</span></label>
+        <input id="Email" type="email" name="Email" />
+        <p class="errormessage">&nbsp;</p>
+      </div>
+
+      <div class="form-input">
+        <label for="Password">Password<span>*</span></label>
+        <input id="Password" type="password" name="Password" />
+        <p class="errormessage">&nbsp;</p>
+      </div>
+
+      <button type="submit">Log In</button>
+
+      <div class="signup-link">
+        <p>Don't have an account? <a href="new.html">Sign Up</a></p>
+      </div>
+    </form>
+
+  
+  </body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="new.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  </head>
+  <body>
+    <form
+      name="LoginForm"
+      method="post"
+      action=""
+      onsubmit="return validateLoginForm(this)"
+    >
+      <h2>Login</h2>
+      <div class="form-input">
+        <label for="Email">Email<span>*</span></label>
+        <input id="Email" type="email" name="Email" required />
+        <p class="errormessage">&nbsp;</p>
+      </div>
+
+      <div class="form-input">
+        <label for="Password">Password<span>*</span></label>
+        <input id="Password" type="password" name="Password" required />
+        <p class="errormessage">&nbsp;</p>
+      </div>
+
+      <button type="submit">Log In</button>
+
+      <div class="signup-link">
+        <p>Don't have an account? <a href="new.html">Sign Up</a></p>
+      </div>
+    </form>
+
+    <script src="new.js"></script>
+  </body>
+</html> -->
